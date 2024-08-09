@@ -1,9 +1,5 @@
-import 'dart:nativewrappers/_internal/vm/lib/core_patch.dart';
-import 'dart:ui';
-
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:firebase_core/firebase_core.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_application_3/profile_screen.dart';
 
@@ -92,7 +88,7 @@ class _LoginScreenState extends State<LoginScreen> {
       } else if (e.code == "wrong-password") {
         print("Wrong password provided");
       }
-      // You can add more error handling here
+      // Add more error handling here if needed
     }
 
     return user;
@@ -158,7 +154,7 @@ class _LoginScreenState extends State<LoginScreen> {
               onPressed: () async {
                 User? user = await loginUsingEmailPassword(
                   email: _emailController.text,
-                  password: _passwordController.text, // Correct parameter
+                  password: _passwordController.text, // Use .text
                   context: context,
                 );
                 if (user != null) {
