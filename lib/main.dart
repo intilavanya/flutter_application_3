@@ -12,7 +12,7 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return const MaterialApp(
       home: HomePage(),
     );
   }
@@ -159,7 +159,7 @@ class _LoginScreenState extends State<LoginScreen> {
                 );
                 if (user != null) {
                   Navigator.of(context).pushReplacement(
-                    MaterialPageRoute(builder: (context) => ProfileScreen()),
+                    MaterialPageRoute(builder: (context) => const ProfileScreen()),
                   );
                 }
               },
